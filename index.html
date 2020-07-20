@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A todo list app">
+  <meta name="keywords" content="todo list, javascript, html, css, scss">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>ToDo List</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="title">ToDo List</h1>
+    <form class="form">
+      <input type="text" name="todo" id="input-td" class="input-todo" placeholder="Enter todo">
+      <button type="submit" class="input-btn"><span class="material-icons">add</span></button>
+    </form>
+
+    <div class="todo-list" data-lists >
+    </div>
+
+  </div>
+
+  <template id="todo-template">
+    <div class="todo-item todo-item-show">
+      <input type="checkbox" name="complete" id="todo-check" class="input-check">
+      <label for="todo-check" class="todo-content">
+        <span class="content-inner"></span>
+      </label>
+      <button class="todo-delete" id="todo-delete">
+        <span class="material-icons">delete_forever</span>
+      </button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
